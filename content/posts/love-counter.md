@@ -19,9 +19,9 @@ Une manière appropriée d'exprimer «Je t'aime» serait de combiner ces trois c
 
 
 
-![项目展示图1](/projet-Love-Counter/1.jpg)  
-![项目展示图2](/projet-Love-Counter/2.jpg)  
-![项目展示图3](/projet-Love-Counter/3.jpg)  
-![项目展示图4](/projet-Love-Counter/4.jpg)  
-![项目展示图5](/projet-Love-Counter/5.jpg)  
-![项目展示图6](/projet-Love-Counter/6.jpg)
+![项目展示图1](/projet-love-counter/1.jpg)  
+![项目展示图2](/projet-love-counter/2.jpg)  
+![项目展示图3](/projet-love-counter/3.jpg)  
+![项目展示图4](/projet-love-counter/4.jpg)  
+![项目展示图5](/projet-love-counter/5.jpg)  
+![项目展示图6](/projet-love-counter/6.jpg)

@@ -1,0 +1,39 @@
+baseURL = 'https://ciana-linm.com/'  
+languageCode = 'en-us'
+title = 'Ciana LIN MENG'
+theme = 'PaperMod'
+
+# 首页设置
+[pagination]
+  pagerSize = 10
+summaryLength = 30
+
+[params]
+  author = "Ciana LIN MENG"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  homeInfoMode = "Posts"
+  mainSections = ["posts"]
+  showCardImage = true  # ✅ 添加这行以启用封面图
+  enableAbout = true
+
+
+
+# 菜单设置
+[menu]
+
+  [[menu.main]]
+    name = "Works"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+# 字体设置（系统字体：San Francisco）
+[params.assets]
+customCSS = ["css/extended/fonts.css"]
+

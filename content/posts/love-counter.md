@@ -2,9 +2,10 @@
 title: "Love Counter"
 date: 2025-04-27T22:00:00+08:00
 draft: false
-images = ["Projet-Love-Counter/封面.jpg"]
-
+cover:
+  image: "/projet-love-counter/cover.jpg"
 ---
+
 
 
 「Je t'aime」est une expression primitive de l'émotion humaine.  
@@ -24,6 +25,3 @@ Une manière appropriée d'exprimer «Je t'aime» serait de combiner ces trois c
 ![项目展示图4](/Projet-Love-Counter/4.jpg)  
 ![项目展示图5](/Projet-Love-Counter/5.jpg)  
 ![项目展示图6](/Projet-Love-Counter/6.jpg)
-
-
-

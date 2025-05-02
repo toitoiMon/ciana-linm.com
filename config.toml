@@ -4,7 +4,8 @@ title = 'Ciana Linm'
 theme = 'PaperMod'
 
 # 首页设置
-paginate = 10
+[pagination]
+  pagerSize = 10
 summaryLength = 30
 
 [params]
@@ -22,7 +23,6 @@ summaryLength = 30
   homeInfoMode = "ShowAll"
   mainSections = ["posts"]
 
-  assets = ["images"]
 
 # 菜单设置
 [menu]

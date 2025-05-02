@@ -18,18 +18,16 @@ summaryLength = 30
   homeInfoParams = false
   hideSummary = false
   hideMeta = false
-  homeInfoMode = "ShowAll"
-  layout = "grid"
-
+  layout = "home"
   homeInfoMode = "ShowAll"
   mainSections = ["posts"]
 
-  # 封面控制
   [params.cover]
     hidden = false
     hiddenInList = false
     hiddenInSingle = false
     responsiveImages = true
+
 
 # 字体设置（系统字体：San Francisco）
 [params.assets]

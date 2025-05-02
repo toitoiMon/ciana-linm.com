@@ -11,8 +11,7 @@ cover:
 
 
 
-«I hope the exit is joyful, and I hope never to return.»
-— Frida Kahlo
+«I hope the exit is joyful, and I hope never to return.» — Frida Kahlo.
 Une affiche inspirée des derniers mots de l'artiste.
 
 - Affiche de film — Frida

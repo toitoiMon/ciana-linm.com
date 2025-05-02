@@ -1,6 +1,6 @@
 baseURL = 'https://ciana-linm.com/'  
 languageCode = 'en-us'
-title = 'Ciana Linm'
+title = 'Ciana Lin Meng'
 theme = 'PaperMod'
 
 # 首页设置
@@ -9,20 +9,29 @@ theme = 'PaperMod'
 summaryLength = 30
 
 [params]
-  author = "Ciana Linm"
+  author = "Ciana Linmeng"
   defaultTheme = "auto"
   ShowShareButtons = false
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = false
-  homeInfoParams = false  # 关闭原主页欢迎内容
+  homeInfoParams = false
   hideSummary = false
   hideMeta = false
 
-  # 首页显示所有文章为卡片
   homeInfoMode = "ShowAll"
   mainSections = ["posts"]
 
+  # 封面控制
+  [params.cover]
+    hidden = false
+    hiddenInList = false
+    hiddenInSingle = false
+    responsiveImages = true
+
+# 字体设置（系统字体：San Francisco）
+[params.assets]
+  customCSS = ["custom.css"]
 
 # 菜单设置
 [menu]
@@ -36,7 +45,3 @@ summaryLength = 30
     name = "About"
     url = "/about/"
     weight = 2
-
-# 字体设置（系统字体：San Francisco）
-[params.assets]
-  customCSS = ["custom.css"]

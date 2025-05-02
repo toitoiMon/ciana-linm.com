@@ -1,6 +1,6 @@
 baseURL = 'https://ciana-linm.com/'  
 languageCode = 'en-us'
-title = 'Ciana Lin Meng（test）'
+title = 'Ciana Lin Meng'
 theme = 'PaperMod'
 
 # 首页设置

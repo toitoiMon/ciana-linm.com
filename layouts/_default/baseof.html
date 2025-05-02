@@ -3,7 +3,7 @@
   <head>
     {{ partial "head.html" . }}
     <style>
-      /* 字体设置：系统无衬线 + 更细 */
+      /* 字体设置：跨系统细体显示 */
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
                      "PingFang SC", "Hiragino Sans GB", "Noto Sans",
@@ -11,7 +11,7 @@
         font-weight: 200;
       }
 
-      /* 封面图缩略设置 */
+      /* 首页封面图样式 */
       .post-card-image img {
         width: 100px;
         height: 100px;
@@ -21,7 +21,7 @@
         margin: 0 auto;
       }
 
-      /* 卡片样式 */
+      /* 首页卡片展示 */
       #content .post-entry {
         display: inline-block;
         width: 140px;
@@ -33,9 +33,14 @@
         box-shadow: none !important;
       }
 
-      /* 居中网格 */
+      /* 首页主内容居中排列 */
       #content main {
         text-align: center;
+      }
+
+      /* ✅ 移除文章内容图片的圆角 */
+      .post-content img {
+        border-radius: 0 !important;
       }
     </style>
   </head>

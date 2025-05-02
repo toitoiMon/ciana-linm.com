@@ -18,6 +18,8 @@ summaryLength = 30
   homeInfoParams = false
   hideSummary = false
   hideMeta = false
+  homeInfoMode = "ShowAll"
+  layout = "grid"
 
   homeInfoMode = "ShowAll"
   mainSections = ["posts"]
@@ -45,3 +47,4 @@ summaryLength = 30
     name = "About"
     url = "/about/"
     weight = 2
+

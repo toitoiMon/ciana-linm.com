@@ -18,24 +18,24 @@ summaryLength = 30
   homeInfoParams = false
   hideSummary = false
   hideMeta = false
-  layout = "home"
+
+  # ✅ 这两行是关键
   homeInfoMode = "ShowAll"
   mainSections = ["posts"]
 
+  # 封面设置
   [params.cover]
     hidden = false
     hiddenInList = false
     hiddenInSingle = false
     responsiveImages = true
 
-
-# 字体设置（系统字体：San Francisco）
+# 字体设置
 [params.assets]
   customCSS = ["custom.css"]
 
 # 菜单设置
 [menu]
-
   [[menu.main]]
     name = "Works"
     url = "/"
@@ -45,4 +45,3 @@ summaryLength = 30
     name = "About"
     url = "/about/"
     weight = 2
-

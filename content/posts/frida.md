@@ -23,4 +23,5 @@ Une affiche inspirée des derniers mots de l'artiste.
 
 ![项目展示图1](/projet-frida/1.jpg)  
 ![项目展示图2](/projet-frida/2.jpg)  
-<!-- trigger rebuild -->
+<!-- update: trigger build -->
+

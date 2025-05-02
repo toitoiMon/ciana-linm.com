@@ -1,24 +1,24 @@
-/* 固定封面图尺寸 */
+/* 控制封面图尺寸 */
 .post-card-image img {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 可选，不需要可删 */
   transition: transform 0.2s ease;
   display: block;
   margin: 0 auto;
 }
 
-/* 让帖子成为内联块，自动流式排列 */
+/* 控制卡片布局：让它变成 inline-block 多列布局 */
 #content .post-entry {
   display: inline-block;
-  width: 140px;     /* 封面 + margin 留白 */
+  width: 140px;
   margin: 10px;
   vertical-align: top;
   text-align: center;
+  background-color: transparent;
 }
 
-/* 居中整个卡片区域 */
+/* 居中整体区域 */
 #content main {
   text-align: center;
 }

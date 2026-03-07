@@ -8,7 +8,7 @@ draft: false
 
 
 
-##摘译
+## 摘译
 
 
 
@@ -97,9 +97,9 @@ Not "Zen versus German philosophy," but the transformative exchanges, uneven cir
 
 
 
-##✢✢✢
+## ✢✢✢
 
-##译后评：相关的方法论参照
+## 译后评：相关的方法论参照
 
 
 以上为李泽光原文的核心摘译。在此基础上，将其与我们更熟悉的汉学/哲学比较框架并置，可以引申出一些关于跨文化比较方法论的进一步探讨。反对文明二元论是自萨义德以来被广泛接受的批判立场。但关于如何替代它，争论仍在继续。萨义德虽然确立了批判的坐标，但在如何处理具体的历史转化与跨文化物质交换上，并未提供一套系统的操作框架。李泽光引用的萨尔盖罗给出了一个谱系学的路径，而另一个可参照的方法论则来自弗朗索瓦·朱利安（François Jullien）。朱利安明确反对以“差异”（différence）来处理中欧之间的关系，因为差异总是以同一性为尺度；他代之以“间距”（écart）。至少在理论声明的层面上，他拒绝将东西方设定为对立的本质板块。他不把文化当作“本质”，而是当作“资源”（ressource）。文化在复数中被思考，每种文化都打开了可以在其间穿行的可能性。事实上，朱利安的这种立场与李泽光的批评是一致的，二者都反对预设两个哲学上同质的文明板块进行对峙。
@@ -122,9 +122,11 @@ Not "Zen versus German philosophy," but the transformative exchanges, uneven cir
 
 
 
+<br><br><br>
 
 
-参考文献 
+<small>
+参考文献：
 Lee, Alex Taek-Gwang. "For Another Buddhism, Against Byung-Chul Han." e-flux Notes, February 18, 2026.
 
 Han, Byung-Chul. The Philosophy of Zen Buddhism. Trans. Daniel Steuer. Cambridge: Polity, 2022.
@@ -138,3 +140,4 @@ Moore, Matthew J. Buddhism and Political Theory. Oxford: Oxford University Press
 Jullien, François. L'écart et l'entre : ou comment penser l'altérité. FMSH-WP-2012-03, 2012.
 
 Billeter, Jean-François. Contre François Jullien. Paris: Allia, 2006.
+</small>

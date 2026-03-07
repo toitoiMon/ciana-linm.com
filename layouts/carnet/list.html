@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+{{ $pages := union .RegularPages .Sections }}
+{{ $paginator := .Paginate $pages }}
+
+<div style="max-width:700px; margin:0 auto; padding:40px 20px;">
+{{ range $index, $page := $paginator.Pages }}
+  <a href="{{ $page.Permalink }}" style="display:block; text-decoration:none; color:inherit; padding:25px 0; border-bottom:1px solid #eee;">
+    <h2 style="margin:0 0 6px 0; font-size:1.1em; font-weight:400;">{{ $page.Title }}</h2>
+    <time style="color:#999; font-size:0.85em;">{{ $page.Date.Format "2006-01-02" }}</time>
+  </a>
+{{ end }}
+</div>
+
+{{ if gt $paginator.TotalPages 1 }}
+<footer class="page-footer">
+  <nav class="pagination">
+    {{ if $paginator.HasPrev }}
+      <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« Previous</a>
+    {{ end }}
+    {{ if $paginator.HasNext }}
+      <a class="next" href="{{ $paginator.Next.URL | absURL }}">Next »</a>
+    {{ end }}
+  </nav>
+</footer>
+{{ end }}
+
+{{ end }}

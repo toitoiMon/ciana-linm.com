@@ -123,22 +123,20 @@ Not "Zen versus German philosophy," but the transformative exchanges, uneven cir
 
 <br><br><br>
 
-<div style="font-size:0.8em; color:#666;">
-
+<div style="font-size:0.8em; color:#666; line-height:1.8;">
 参考文献
-<br>
+<br><br>
 Lee, Alex Taek-Gwang. "For Another Buddhism, Against Byung-Chul Han." e-flux Notes, February 18, 2026.
-
+<br><br>
 Han, Byung-Chul. The Philosophy of Zen Buddhism. Trans. Daniel Steuer. Cambridge: Polity, 2022.
-
+<br><br>
 Han, Byung-Chul. Abwesen: Zur Kultur und Philosophie des Fernen Ostens. Berlin: Merve Verlag, 2007. （中译参考章节：本质与非本质——无住）
-
+<br><br>
 Salguero, C. Pierce. A Global History of Buddhism and Medicine. New York: Columbia University Press, 2022.
-
+<br><br>
 Moore, Matthew J. Buddhism and Political Theory. Oxford: Oxford University Press, 2016.
-
+<br><br>
 Jullien, François. L'écart et l'entre : ou comment penser l'altérité. FMSH-WP-2012-03, 2012.
-
+<br><br>
 Billeter, Jean-François. Contre François Jullien. Paris: Allia, 2006.
-
 </div>

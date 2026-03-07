@@ -121,12 +121,12 @@ Not "Zen versus German philosophy," but the transformative exchanges, uneven cir
 这一光谱的启示在于：当研究对象发生变化时，对方法论维度与锚点的要求也随之不同。李泽光的批评及其替代路径主要在哲学和历史的层面上工作，回答的核心问题是“传统是如何被建构出来的”。那么，一个值得进一步追问的方向是：如果跨文化比较的对象不是哲学概念，而是物质性的造物（matérialité de l'artefact）呢？比起纯粹的文字文本，物质造物天然具有抗拒被氛围化或“悬置历史”的物理阻力。因此，将目光转向具体的制作过程（poïétique）与直观的知觉体验，或许本身就是对本质主义二元论最有力的一种物质性抵抗。
 
 
-
 <br><br><br>
 
+<div style="font-size:0.8em; color:#666;">
 
-<small>
-参考文献：
+参考文献
+<br>
 Lee, Alex Taek-Gwang. "For Another Buddhism, Against Byung-Chul Han." e-flux Notes, February 18, 2026.
 
 Han, Byung-Chul. The Philosophy of Zen Buddhism. Trans. Daniel Steuer. Cambridge: Polity, 2022.
@@ -140,4 +140,5 @@ Moore, Matthew J. Buddhism and Political Theory. Oxford: Oxford University Press
 Jullien, François. L'écart et l'entre : ou comment penser l'altérité. FMSH-WP-2012-03, 2012.
 
 Billeter, Jean-François. Contre François Jullien. Paris: Allia, 2006.
-</small>
+
+</div>

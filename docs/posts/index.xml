@@ -125,7 +125,8 @@ Une affiche inspirée des derniers mots de l&amp;rsquo;artiste.&lt;/p&gt;
 &lt;li&gt;2020&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt=&#34;项目展示图1&#34; loading=&#34;lazy&#34; src=&#34;https://ciana-linm.com/projet-frida/1.jpg&#34;&gt;&lt;br&gt;
-&lt;img alt=&#34;项目展示图2&#34; loading=&#34;lazy&#34; src=&#34;https://ciana-linm.com/projet-frida/2.jpg&#34;&gt;&lt;/p&gt;</description>
+&lt;img alt=&#34;项目展示图2&#34; loading=&#34;lazy&#34; src=&#34;https://ciana-linm.com/projet-frida/2.jpg&#34;&gt;&lt;/p&gt;
+&lt;!-- update: trigger build --&gt;</description>
     </item>
     <item>
       <title>Love Counter</title>

@@ -10,9 +10,14 @@
 
 {{ range $index, $page := $paginator.Pages }}
 <article class="post-entry">
-  {{ with $page.Params.cover.image }}
+  {{ if $page.Params.cover.image }}
     <a href="{{ $page.Permalink }}">
-      <img class="post-cover" src="{{ . | relURL }}" alt="{{ $page.Title }}">
+      <img class="post-cover" src="{{ $page.Params.cover.image | relURL }}" alt="{{ $page.Title }}">
+    </a>
+  {{ else }}
+    <a href="{{ $page.Permalink }}" style="display:block; padding:20px 0; text-decoration:none;">
+      <h2 style="margin:0 0 5px 0;">{{ $page.Title }}</h2>
+      <time style="color:#999; font-size:0.9em;">{{ $page.Date.Format "2006-01-02" }}</time>
     </a>
   {{ end }}
 </article>

@@ -13,15 +13,7 @@
 </head>
 <body class="page-home">
 
-  <header class="site-header">
-    <a href="{{ "" | relURL }}" class="site-name">CIANA LIN MENG</a>
-    <nav class="site-nav">
-      <a href="{{ "posts/" | relURL }}" id="works-toggle">Works</a>
-      <a href="{{ "carnet/" | relURL }}">Carnet</a>
-      <a href="{{ "fragments/" | relURL }}">Fragments</a>
-      <a href="{{ "about/" | relURL }}">About</a>
-    </nav>
-  </header>
+  {{ partial "header.html" . }}
 
   <main class="homepage">
 

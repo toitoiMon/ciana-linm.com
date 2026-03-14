@@ -14,6 +14,10 @@
   --header-height: 68px;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 
 /* ==========================================================
    GLOBAL RESET & TYPOGRAPHY
@@ -65,14 +69,15 @@ h1, h2, h3, h4, h5, h6, p, a, li, span, time, blockquote, label {
   left: 0;
   right: 0;
   z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 24px 36px;
+  height: var(--header-height);
+  padding: 0;
   background: var(--color-white);
 }
 
 .site-name {
+  position: absolute;
+  left: 36px;
+  top: 24px;
   font-family: var(--font-latin);
   font-weight: 300;
   font-size: 14px;
@@ -86,6 +91,9 @@ h1, h2, h3, h4, h5, h6, p, a, li, span, time, blockquote, label {
 .site-name:hover { opacity: 0.4; }
 
 .site-nav {
+  position: absolute;
+  right: 36px;
+  top: 24px;
   display: flex;
   gap: 48px;
 }
@@ -423,7 +431,14 @@ h1, h2, h3, h4, h5, h6, p, a, li, span, time, blockquote, label {
 }
 
 @media (max-width: 600px) {
-  .site-header { padding: 18px 20px; }
+  .site-name {
+    left: 20px;
+    top: 18px;
+  }
+  .site-nav {
+    right: 20px;
+    top: 18px;
+  }
   .site-nav { gap: 24px; }
 
   .works-grid {

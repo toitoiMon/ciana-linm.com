@@ -1,4 +1,4 @@
 ---
 date: 2026-02-05
-image: "/fragments/glyph-007.jpg"
+image: "/fragments/glyph-007.svg"
 ---

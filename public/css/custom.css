@@ -12,10 +12,6 @@
   --header-height: 68px;
 }
 
-html {
-  scrollbar-gutter: stable;
-}
-
 
 /* ==========================================================
    HOMEPAGE BODY
@@ -31,58 +27,6 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-
-/* ==========================================================
-   HEADER
-   ========================================================== */
-
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  height: var(--header-height);
-  padding: 0;
-  background: var(--color-white);
-}
-
-.site-name {
-  position: absolute;
-  left: 36px;
-  top: 24px;
-  font-family: var(--font-latin);
-  font-weight: 300;
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-black);
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.site-name:hover { opacity: 0.4; }
-
-.site-nav {
-  position: absolute;
-  right: 36px;
-  top: 24px;
-  display: flex;
-  gap: 48px;
-}
-
-.site-nav a {
-  font-family: var(--font-latin);
-  font-weight: 300;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  color: var(--color-black);
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-  cursor: pointer;
-}
-
-.site-nav a:hover { opacity: 0.4; }
 
 
 /* ==========================================================
@@ -195,18 +139,7 @@ html {
    RESPONSIVE
    ========================================================== */
 
-@media (max-width: 600px) {
-  .site-name {
-    left: 20px;
-    top: 18px;
-  }
-  .site-nav {
-    right: 20px;
-    top: 18px;
-  }
-  .site-nav { gap: 24px; }
-  .site-nav a, .site-name { font-size: 12px; }
-
+@media (max-width: 768px) {
   /* 移动端竖排目录隐藏 */
   .vertical-menu { display: none !important; }
 

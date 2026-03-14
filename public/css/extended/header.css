@@ -1,0 +1,71 @@
+/* ==========================================================
+   SITE HEADER — shared between homepage & inner pages
+   Single source of truth: loaded by both index.html (via
+   resources.Get) and inner pages (via PaperMod's extended/ glob).
+   ========================================================== */
+
+/* Ensure consistent box-sizing & scrollbar space */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Suppress PaperMod's own header */
+.header { display: none !important; }
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 24px 36px;
+  background: var(--color-white, #fff);
+}
+
+.site-name {
+  font-family: var(--font-latin, 'Inter', sans-serif);
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-black, #000);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.site-name:hover { opacity: 0.4; }
+
+.site-nav {
+  display: flex;
+  gap: 48px;
+}
+
+.site-nav a {
+  font-family: var(--font-latin, 'Inter', sans-serif);
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--color-black, #000);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.site-nav a:hover { opacity: 0.4; }
+
+
+/* --- Responsive ----------------------------------------- */
+
+@media (max-width: 768px) {
+  .site-header { padding: 18px 20px; }
+  .site-nav { gap: 24px; }
+}
+
+@media (max-width: 600px) {
+  .site-name,
+  .site-nav a { font-size: 12px; }
+}

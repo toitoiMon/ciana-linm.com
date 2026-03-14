@@ -14,10 +14,6 @@
   --header-height: 68px;
 }
 
-html {
-  scrollbar-gutter: stable;
-}
-
 
 /* ==========================================================
    GLOBAL RESET & TYPOGRAPHY
@@ -55,60 +51,6 @@ h1, h2, h3, h4, h5, h6, p, a, li, span, time, blockquote, label {
 /* Remove PaperMod breadcrumbs */
 .breadcrumbs { display: none !important; }
 
-
-/* ==========================================================
-   SITE HEADER  (same class names as homepage)
-   ========================================================== */
-
-/* Suppress PaperMod's own header */
-.header { display: none !important; }
-
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  height: var(--header-height);
-  padding: 0;
-  background: var(--color-white);
-}
-
-.site-name {
-  position: absolute;
-  left: 36px;
-  top: 24px;
-  font-family: var(--font-latin);
-  font-weight: 300;
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-black);
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.site-name:hover { opacity: 0.4; }
-
-.site-nav {
-  position: absolute;
-  right: 36px;
-  top: 24px;
-  display: flex;
-  gap: 48px;
-}
-
-.site-nav a {
-  font-family: var(--font-latin);
-  font-weight: 300;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  color: var(--color-black);
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.site-nav a:hover { opacity: 0.4; }
 
 
 /* ==========================================================
@@ -179,15 +121,15 @@ h1, h2, h3, h4, h5, h6, p, a, li, span, time, blockquote, label {
   align-items: flex-start;
   min-height: calc(100vh - var(--header-height));
   padding: 0 36px;
-  gap: 80px;
-  max-width: 1200px;
+  gap: 48px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .work-info {
   position: sticky;
   top: calc(var(--header-height) + 48px);
-  flex: 0 0 240px;
+  flex: 0 0 280px;
 }
 
 .work-title {
@@ -314,7 +256,7 @@ h1, h2, h3, h4, h5, h6, p, a, li, span, time, blockquote, label {
   font-weight: 300;
   font-size: 15px;
   line-height: 1.75;
-  margin-bottom: 0;
+  margin-bottom: 1.2em;
 }
 
 .page-single .page-content p:lang(zh) {
@@ -381,24 +323,22 @@ h1, h2, h3, h4, h5, h6, p, a, li, span, time, blockquote, label {
    ========================================================== */
 
 .fragments-feed {
-  /* ~45% of viewport = narrow column */
-  width: 45%;
-  min-width: 280px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 36px;
 }
 
 .fragment-item {
-  margin-bottom: 80px;
   text-align: center;
 }
 
-/* Each image is 60% of the column */
 .fragment-item img {
-  width: 60%;
+  width: 100%;
   height: auto;
-  display: inline-block;
-  /* No hover, no border, no cursor change */
+  display: block;
   pointer-events: none;
   user-select: none;
 }
@@ -426,32 +366,20 @@ h1, h2, h3, h4, h5, h6, p, a, li, span, time, blockquote, label {
   }
 
   .fragments-feed {
-    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 24px;
   }
 }
 
 @media (max-width: 600px) {
-  .site-name {
-    left: 20px;
-    top: 18px;
-  }
-  .site-nav {
-    right: 20px;
-    top: 18px;
-  }
-  .site-nav { gap: 24px; }
-
   .works-grid {
     columns: 1;
     padding: 0 20px;
   }
 
   .fragments-feed {
-    width: 90%;
-  }
-
-  .fragment-item img {
-    width: 80%;
+    grid-template-columns: 1fr;
+    padding: 0 20px;
   }
 
   .page-single,

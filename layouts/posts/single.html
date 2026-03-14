@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<div class="work-detail">
+
+  <aside class="work-info">
+    <h1 class="work-title">{{ .Title }}</h1>
+
+    {{- with .Description }}
+    <div class="work-desc">{{ . | markdownify }}</div>
+    {{- end }}
+
+    {{- with .Params.medium }}
+    <ul class="work-meta">
+      {{- range . }}
+      <li>{{ . }}</li>
+      {{- end }}
+    </ul>
+    {{- end }}
+
+    {{- with .Params.year }}
+    <p class="work-year">{{ . }}</p>
+    {{- end }}
+  </aside>
+
+  <div class="work-body">
+    {{ .Content }}
+  </div>
+
+</div>
+
+{{ end }}

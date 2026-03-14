@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Site.Title }}</title>
+  <meta name="description" content="Ciana Lin Meng — Researcher, Typographer, Designer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body class="page-home">
+
+  <header class="site-header">
+    <a href="{{ "" | relURL }}" class="site-name">CIANA LIN MENG</a>
+    <nav class="site-nav">
+      <a href="{{ "posts/" | relURL }}" id="works-toggle">Works</a>
+      <a href="{{ "carnet/" | relURL }}">Carnet</a>
+      <a href="{{ "fragments/" | relURL }}">Fragments</a>
+      <a href="{{ "about/" | relURL }}">About</a>
+    </nav>
+  </header>
+
+  <main class="homepage">
+
+    <!-- 竖排中文目录：默认隐藏，点击 Works 切换 -->
+    <nav class="vertical-menu" id="vertical-menu" aria-hidden="true">
+      <a href="{{ "posts/rumushifen/" | relURL }}" class="vm-item"><span>一：入目十分品牌标识</span></a>
+      <a href="{{ "posts/sutra-du-cœur/" | relURL }}" class="vm-item"><span>二：般若波罗蜜多心经书法集字</span></a>
+      <a href="{{ "posts/charing84/" | relURL }}" class="vm-item"><span>三：书籍设计「查令十字街84号」</span></a>
+      <a href="{{ "posts/haute-resolution/" | relURL }}" class="vm-item"><span>四：海报设计</span></a>
+      <a href="{{ "posts/les-trois-singes/" | relURL }}" class="vm-item"><span>五：三不猴</span></a>
+      <a href="{{ "posts/zhaozhiqian/" | relURL }}" class="vm-item"><span>六：赵之谦「急就章」字形复刻</span></a>
+      <a href="{{ "posts/xuanzhen/" | relURL }}" class="vm-item"><span>七：悬针篆字形复刻</span></a>
+      <a href="{{ "posts/frida/" | relURL }}" class="vm-item"><span>八：电影海报设计「弗里达」</span></a>
+      <a href="{{ "posts/love-counter/" | relURL }}" class="vm-item"><span>九：组合字设计「爱」</span></a>
+      <a href="{{ "posts/" | relURL }}" class="vm-item vm-see-all"><span>See All →</span></a>
+    </nav>
+
+    <!-- 三个装饰字形 -->
+    <div class="hero-glyphs">
+      <img src="{{ "images/glyph-ai.svg" | relURL }}" alt="爱">
+      <img src="{{ "images/glyph-an.svg" | relURL }}" alt="安">
+      <img src="{{ "images/glyph-zhong.svg" | relURL }}" alt="重">
+    </div>
+
+    <footer class="home-footer">
+      <span>&copy; {{ now.Year }} Ciana Lin Meng</span>
+    </footer>
+
+  </main>
+
+  <script>
+    (function () {
+      var btn  = document.getElementById('works-toggle');
+      var menu = document.getElementById('vertical-menu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var open = menu.classList.toggle('is-open');
+        menu.setAttribute('aria-hidden', String(!open));
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!menu.classList.contains('is-open')) return;
+        if (menu.contains(e.target) || e.target === btn) return;
+        menu.classList.remove('is-open');
+        menu.setAttribute('aria-hidden', 'true');
+      });
+    })();
+  </script>
+
+</body>
+</html>

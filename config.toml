@@ -1,6 +1,6 @@
 baseURL = 'https://ciana-linm.com/'  
 languageCode = 'en-us'
-title = 'Ciana Lin Meng'
+title = 'CIANA LIN MENG'
 theme = 'PaperMod'
 
 # 首页设置
@@ -10,16 +10,17 @@ summaryLength = 30
 
 [params]
   author = "Ciana Linmeng"
-  defaultTheme = "auto"
+  defaultTheme = "light"
   ShowShareButtons = false
-  ShowReadingTime = true
-  ShowPostNavLinks = true
+  ShowReadingTime = false
+  ShowPostNavLinks = false
   ShowBreadCrumbs = false
   homeInfoParams = false
-  hideSummary = false
-  hideMeta = false
+  hideSummary = true
+  hideMeta = true
+  disableThemeToggle = true
+  disableScrollToTop = true
 
-  # ✅ 这两行是关键
   homeInfoMode = "ShowAll"
   mainSections = ["posts"]
 
@@ -30,15 +31,12 @@ summaryLength = 30
     hiddenInSingle = false
     responsiveImages = true
 
-# 字体设置
-[params.assets]
-  customCSS = ["css/custom.css"]
-
+# 菜单设置
 # 菜单设置
 [menu]
   [[menu.main]]
     name = "Works"
-    url = "/"
+    url = "/posts/"
     weight = 1
 
   [[menu.main]]
@@ -47,11 +45,16 @@ summaryLength = 30
     weight = 2
 
   [[menu.main]]
-    name = "About"
-    url = "/about/"
+    name = "Fragments"
+    url = "/fragments/"
     weight = 3
 
-    [markup]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+
+[markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true

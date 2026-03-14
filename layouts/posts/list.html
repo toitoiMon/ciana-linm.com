@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<div class="works-grid">
+  {{- range .Pages.ByDate.Reverse }}
+  <a href="{{ .Permalink }}" class="works-grid-item">
+    {{- with .Params.cover }}
+    <img src="{{ .image }}" alt="{{ $.Title }}" loading="lazy">
+    {{- end }}
+  </a>
+  {{- end }}
+</div>
+
+{{ end }}

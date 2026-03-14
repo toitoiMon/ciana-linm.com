@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<div class="fragments-feed">
+  {{- range .Pages.ByDate.Reverse }}
+  <div class="fragment-item">
+    {{- with .Params.image }}
+    <img src="{{ . }}" alt="" loading="lazy">
+    {{- end }}
+  </div>
+  {{- end }}
+</div>
+
+{{ end }}

@@ -1,54 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
-  <head>
-    {{ partial "head.html" . }}
-    <style>
-      /* 字体设置：跨系统细体显示 */
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-                     "PingFang SC", "Hiragino Sans GB", "Noto Sans",
-                     "Microsoft YaHei", sans-serif;
-        font-weight: 200;
-      }
-
-      /* 首页封面图样式 */
-      .post-card-image img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        transition: transform 0.2s ease;
-        display: block;
-        margin: 0 auto;
-      }
-
-      /* 首页卡片展示 */
-      #content .post-entry {
-        display: inline-block;
-        width: 140px;
-        margin: 10px;
-        vertical-align: top;
-        text-align: center;
-        background-color: transparent;
-        border: none !important;
-        box-shadow: none !important;
-      }
-
-      /* 首页主内容居中排列 */
-      #content main {
-        text-align: center;
-      }
-
-      /* ✅ 移除文章内容图片的圆角 */
-      .post-content img {
-        border-radius: 0 !important;
-      }
-    </style>
-  </head>
-  <body>
-    {{ partial "header.html" . }}
-    <main id="content" class="main">
-      {{ block "main" . }}{{ end }}
-    </main>
-    {{ partial "footer.html" . }}
-  </body>
+<html lang="{{ .Site.LanguageCode | default "zh" }}">
+<head>
+  {{- partial "head.html" . }}
+</head>
+<body>
+  {{ partial "header.html" . }}
+  <main class="main">
+    {{- block "main" . }}{{ end }}
+  </main>
+  {{- if and .File (eq .File.ContentBaseName "about") }}
+  {{ partial "footer.html" . }}
+  {{- end }}
+</body>
 </html>

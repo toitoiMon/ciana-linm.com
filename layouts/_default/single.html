@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+{{- $slug := .File.ContentBaseName | urlize }}
+<div class="page-single page-{{ $slug }}">
+
+  {{- if not (.Param "hideTitle") }}
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{- end }}
+
+  {{- if not (.Param "hideMeta") }}
+  <p class="page-meta">
+    <time>{{ .Date.Format "2006.01.02" }}</time>
+  </p>
+  {{- end }}
+
+  <div class="page-content">
+    {{ .Content }}
+  </div>
+
+</div>
+
+{{ end }}

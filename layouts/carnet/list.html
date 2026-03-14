@@ -3,26 +3,28 @@
 {{ $pages := union .RegularPages .Sections }}
 {{ $paginator := .Paginate $pages }}
 
-<div style="max-width:700px; margin:0 auto; padding:40px 20px;">
-{{ range $index, $page := $paginator.Pages }}
-  <a href="{{ $page.Permalink }}" style="display:block; text-decoration:none; color:inherit; padding:25px 0; border-bottom:1px solid #eee;">
-    <h2 style="margin:0 0 6px 0; font-size:1.1em; font-weight:400;">{{ $page.Title }}</h2>
-    <time style="color:#999; font-size:0.85em;">{{ $page.Date.Format "2006-01-02" }}</time>
+<div class="posts-wrapper">
+  {{ range $paginator.Pages }}
+  <a href="{{ .Permalink }}" class="post-entry" style="display:block; text-decoration:none; color:inherit;">
+    <div class="entry-header">
+      <h2>{{ .Title }}</h2>
+    </div>
+    <div class="entry-footer">
+      <time>{{ .Date.Format "2006.01.02" }}</time>
+    </div>
   </a>
-{{ end }}
+  {{ end }}
 </div>
 
 {{ if gt $paginator.TotalPages 1 }}
-<footer class="page-footer">
-  <nav class="pagination">
-    {{ if $paginator.HasPrev }}
-      <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">« Previous</a>
-    {{ end }}
-    {{ if $paginator.HasNext }}
-      <a class="next" href="{{ $paginator.Next.URL | absURL }}">Next »</a>
-    {{ end }}
-  </nav>
-</footer>
+<nav class="pagination" style="padding: 32px 36px;">
+  {{ if $paginator.HasPrev }}
+  <a href="{{ $paginator.Prev.URL | absURL }}" style="font-family:var(--font-latin);font-weight:300;font-size:13px;color:#000;text-decoration:none;margin-right:24px;">← Précédent</a>
+  {{ end }}
+  {{ if $paginator.HasNext }}
+  <a href="{{ $paginator.Next.URL | absURL }}" style="font-family:var(--font-latin);font-weight:300;font-size:13px;color:#000;text-decoration:none;">Suivant →</a>
+  {{ end }}
+</nav>
 {{ end }}
 
 {{ end }}

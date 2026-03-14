@@ -1,0 +1,452 @@
+/* ==========================================================
+   CIANA LIN MENG — Site CSS  (non-homepage, PaperMod override)
+   Injected by PaperMod's head.html after core styles
+   ========================================================== */
+
+/* --- Variables ------------------------------------------- */
+
+:root {
+  --font-latin: 'Inter', sans-serif;
+  --font-chinese-kai: 'STKaiti', 'KaiTi', 'AR PL KaitiM GB', serif;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray-light: #999;
+  --header-height: 68px;
+}
+
+
+/* ==========================================================
+   GLOBAL RESET & TYPOGRAPHY
+   ========================================================== */
+
+html, body {
+  background: var(--color-white) !important;
+}
+
+body {
+  font-family: var(--font-latin);
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--color-black);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Inter Light on all PaperMod text elements */
+h1, h2, h3, h4, h5, h6, p, a, li, span, time, blockquote, label {
+  font-family: var(--font-latin);
+  font-weight: 300;
+}
+
+/* Chinese → kaiti */
+:lang(zh) h1, :lang(zh) h2, :lang(zh) p, :lang(zh) li {
+  font-family: var(--font-chinese-kai);
+}
+
+/* Remove PaperMod dark mode toggle */
+#theme-toggle, .theme-toggle, .logo-switches { display: none !important; }
+
+/* Remove PaperMod scroll-to-top button */
+.top-link { display: none !important; }
+
+/* Remove PaperMod breadcrumbs */
+.breadcrumbs { display: none !important; }
+
+
+/* ==========================================================
+   SITE HEADER  (same class names as homepage)
+   ========================================================== */
+
+/* Suppress PaperMod's own header */
+.header { display: none !important; }
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 24px 36px;
+  background: var(--color-white);
+}
+
+.site-name {
+  font-family: var(--font-latin);
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.site-name:hover { opacity: 0.4; }
+
+.site-nav {
+  display: flex;
+  gap: 48px;
+}
+
+.site-nav a {
+  font-family: var(--font-latin);
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--color-black);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.site-nav a:hover { opacity: 0.4; }
+
+
+/* ==========================================================
+   MAIN CONTENT AREA — offset from fixed header
+   ========================================================== */
+
+.main {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: calc(var(--header-height) + 48px) 0 80px !important;
+}
+
+
+/* ==========================================================
+   SITE FOOTER
+   ========================================================== */
+
+/* Hide PaperMod's footer */
+.footer { display: none !important; }
+
+.site-footer {
+  padding: 80px 36px 24px;
+  font-family: var(--font-latin);
+  font-weight: 300;
+  font-size: 11px;
+  color: var(--color-gray-light);
+  letter-spacing: 0.04em;
+}
+
+
+/* ==========================================================
+   WORKS GRID — /posts/ list page  (masonry / waterfall)
+   ========================================================== */
+
+.works-grid {
+  columns: 3;
+  column-gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+.works-grid-item {
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 16px;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.works-grid-item img {
+  width: 100%;
+  height: auto;   /* natural ratio — no cropping */
+  display: block;
+  transition: opacity 0.25s ease;
+}
+
+.works-grid-item:hover img { opacity: 0.75; }
+
+
+/* ==========================================================
+   WORK DETAIL PAGE — /posts/[slug]/
+   Left sidebar (info) + right column (images)
+   ========================================================== */
+
+.work-detail {
+  display: flex;
+  align-items: flex-start;
+  min-height: calc(100vh - var(--header-height));
+  padding: 0 36px;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-info {
+  position: sticky;
+  top: calc(var(--header-height) + 48px);
+  flex: 0 0 240px;
+}
+
+.work-title {
+  font-family: var(--font-latin);
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+}
+
+.work-desc {
+  margin: 0 0 16px 0;
+}
+
+/* markdownify wraps text in <p> — style those */
+.work-desc p {
+  font-family: var(--font-latin);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-black);
+  margin: 0 0 10px 0;
+  max-width: 220px;
+}
+
+.work-desc p:last-child { margin-bottom: 0; }
+
+.work-year {
+  font-family: var(--font-latin);
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--color-gray-light);
+  letter-spacing: 0.04em;
+  margin: 8px 0 0 0;
+}
+
+.work-meta {
+  font-family: var(--font-latin);
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--color-gray-light);
+  letter-spacing: 0.04em;
+  line-height: 1.8;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.work-body {
+  flex: 1;
+  min-width: 0;
+  padding-bottom: 80px;
+}
+
+/* Images: full column width, 24px gap */
+.work-body img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 24px;
+}
+
+/* Text blocks in body (description / specs left in markdown) */
+.work-body p {
+  font-family: var(--font-latin);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 16px;
+}
+
+.work-body p:lang(zh) {
+  font-family: var(--font-chinese-kai);
+}
+
+.work-body ul, .work-body ol {
+  font-family: var(--font-latin);
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--color-gray-light);
+  line-height: 1.8;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+/* Hide PaperMod post header/footer on work pages */
+.post-single { max-width: none !important; padding: 0 !important; }
+.post-header  { display: none !important; }
+.post-footer  { display: none !important; }
+
+
+/* ==========================================================
+   SINGLE PAGE (about, carnet posts) — _default/single.html
+   ========================================================== */
+
+/* Full-width wrapper with 36px padding — matches .posts-wrapper structure */
+.page-single {
+  padding: 0 36px;
+}
+
+/* Content block centered at max 640px — same effective left edge as .post-entry */
+.page-single .page-content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.page-single .page-title {
+  font-family: var(--font-latin);
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  margin: 0 0 32px 0;
+  line-height: 1.4;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-single .page-content p {
+  font-family: var(--font-latin);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+.page-single .page-content p:lang(zh) {
+  font-family: var(--font-chinese-kai);
+}
+
+/* About-specific: emails look like plain text */
+.page-about .page-content a[href^="mailto"],
+.page-about .page-content a {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+}
+
+
+/* ==========================================================
+   CARNET — /carnet/ list page
+   ========================================================== */
+
+/* PaperMod post-entry override */
+.post-entry {
+  border: none !important;
+  border-bottom: 1px solid #e8e8e8 !important;
+  padding: 20px 0 !important;
+  margin: 0 auto !important;
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  max-width: 640px !important;
+  transition: opacity 0.2s ease;
+}
+
+.post-entry:hover { opacity: 0.5; }
+
+.post-entry .entry-header h2 {
+  font-family: var(--font-chinese-kai);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-black);
+  margin: 0 0 4px 0;
+}
+
+.post-entry .entry-header h2 a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.post-entry .entry-footer {
+  font-family: var(--font-latin);
+  font-size: 12px;
+  color: var(--color-gray-light);
+  letter-spacing: 0.04em;
+  margin-top: 0;
+}
+
+/* Container that wraps entries */
+.posts-wrapper { padding: 0 36px; }
+
+
+/* ==========================================================
+   FRAGMENTS — /fragments/ list page
+   Narrow centered column, 60%-wide images, 80px between
+   ========================================================== */
+
+.fragments-feed {
+  /* ~45% of viewport = narrow column */
+  width: 45%;
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.fragment-item {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+/* Each image is 60% of the column */
+.fragment-item img {
+  width: 60%;
+  height: auto;
+  display: inline-block;
+  /* No hover, no border, no cursor change */
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 900px) {
+  .work-detail {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 24px;
+  }
+
+  .work-info {
+    position: static;
+    flex: none;
+  }
+
+  .works-grid {
+    columns: 2;
+    padding: 0 24px;
+  }
+
+  .fragments-feed {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header { padding: 18px 20px; }
+  .site-nav { gap: 24px; }
+
+  .works-grid {
+    columns: 1;
+    padding: 0 20px;
+  }
+
+  .fragments-feed {
+    width: 90%;
+  }
+
+  .fragment-item img {
+    width: 80%;
+  }
+
+  .page-single,
+  .posts-wrapper,
+  .work-detail {
+    padding: 0 20px;
+  }
+
+  .main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

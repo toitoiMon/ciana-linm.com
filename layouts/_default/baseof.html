@@ -11,5 +11,6 @@
   {{- if and .File (eq .File.ContentBaseName "about") }}
   {{ partial "footer.html" . }}
   {{- end }}
+  {{- partial "extend_footer.html" . -}}
 </body>
 </html>

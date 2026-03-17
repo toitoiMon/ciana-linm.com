@@ -1,6 +1,7 @@
 ---
 title: "07 摘译：为另一种佛教，驳韩炳哲"
 date: 2026-02-21T12:00:00+08:00
+tags: ["carnet-de-voyage"]
 draft: false
 ---
 
@@ -96,8 +97,6 @@ Not "Zen versus German philosophy," but the transformative exchanges, uneven cir
 
 
 
-
-## ✢✢✢
 
 ## 译后评：相关的方法论参照
 

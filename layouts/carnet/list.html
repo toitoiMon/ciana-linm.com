@@ -3,9 +3,16 @@
 {{ $pages := union .RegularPages .Sections }}
 {{ $paginator := .Paginate $pages }}
 
+<div class="carnet-tags">
+  <button class="carnet-tag-btn" data-tag="lumieres-et-ombres">光与影</button>
+  <button class="carnet-tag-btn" data-tag="kanji">汉字</button>
+  <button class="carnet-tag-btn" data-tag="carnet-de-voyage">Carnet de voyage</button>
+</div>
+
 <div class="posts-wrapper">
   {{ range $paginator.Pages }}
-  <a href="{{ .Permalink }}" class="post-entry" style="display:block; text-decoration:none; color:inherit;">
+  <a href="{{ .Permalink }}" class="post-entry" style="display:block; text-decoration:none; color:inherit;"
+     data-tags="{{ delimit .Params.tags "," }}">
     <div class="entry-header">
       <h2>{{ .Title }}</h2>
     </div>
@@ -26,5 +33,33 @@
   {{ end }}
 </nav>
 {{ end }}
+
+<script>
+(function() {
+  var activeTag = null;
+  var btns = document.querySelectorAll('.carnet-tag-btn');
+  var entries = document.querySelectorAll('.post-entry');
+
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var tag = btn.getAttribute('data-tag');
+
+      if (activeTag === tag) {
+        activeTag = null;
+        btns.forEach(function(b) { b.classList.remove('active'); });
+        entries.forEach(function(e) { e.style.display = 'block'; });
+      } else {
+        activeTag = tag;
+        btns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        entries.forEach(function(e) {
+          var tags = (e.getAttribute('data-tags') || '').split(',');
+          e.style.display = tags.indexOf(tag) !== -1 ? 'block' : 'none';
+        });
+      }
+    });
+  });
+})();
+</script>
 
 {{ end }}
